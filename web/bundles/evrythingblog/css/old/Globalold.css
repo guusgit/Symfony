@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+
+/***************************** Global Classique ***************************/
+body{
+	margin:0px;
+	padding:0px;
+	border:0px;
+	background-color:#fff;
+	background-image:url("../images/background.jpg");
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-position:center; 
+}
+#background{
+	position:relative;
+}
+header{
+	position:absolute;
+	left:10%;
+	width:80%;	
+	height:135px;
+	background-image:url("../images/header.jpg");
+	background-position:center;
+}
+nav{
+	position:absolute;
+	width:100%;
+	align-content:center;
+	top:85px;
+	height:5%;
+}
+nav ul li{
+	display:inline-block;
+	margin-left:10px;
+	margin-right:10px;
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size:medium;
+	font-weight:bold;	
+}
+.navOrange{
+	color:#ff7e00;
+}
+.navBleu{
+	color:#38618d;	
+}
+nav ul li a{
+	text-decoration:none;
+	text-shadow: 0px 8px 5px #909090; 	
+}
+nav ul li a:onhover{
+	/*transition: top 1.4s cubic-bezier(.49,.22,.52,1.35);  */
+}
+#centre{
+	position:relative;
+	left:10%;
+	top:135px;
+	width:80%;
+	height:500px;
+	background-color: rgba(221, 221, 221, 0.8);
+}
+/*footer{
+	background: linear-gradient(#fff 0%, #cdcdcd 80%);
+	position:absolute;
+	left:10%;
+	bottom:0px;
+	width:80%;
+	height:75px;
+}*/
+
+/****************************** CSS Font/Titre/Décoration ***********************/
+.titre1{
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size:large;
+	font-weight:bold;			
+	color:#F5F5F5;
+	text-shadow: 0px 8px 5px #909090;
+	margin-left:15px;
+	text-transform:uppercase;
+}

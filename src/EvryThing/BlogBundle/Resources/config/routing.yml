@@ -1,0 +1,31 @@
+evry_thing_blog_accueil:
+    pattern:  /{page}
+    defaults : { _controller: EvryThingBlogBundle:Blog:accueil}
+    requirements:
+        page: \d*
+
+evry_thing_blog_VoirArticle:
+    pattern: /article/{id}
+    defaults : { _controller: EvryThingBlogBundle:Blog:voirArticle}
+    requirements: 
+        id: \d*
+
+evry_thing_blog_ajouterArticle:
+    pattern: /ajouter
+    defaults: { _controller: EvryThingBlogBundle:Blog:ajouterArticle }
+
+evry_thing_blog_modifierArticle:
+    pattern: /modifier/{id}
+    defaults: { _controller: EvryThingBlogBundle:Blog:modifierArticle }
+    requirements: 
+        id: \d*
+
+evry_thing_blog_supprimerArticle:
+    pattern: /supprimer/{id}
+    defaults: { _controller: EvryThingBlogBiundle:Blog:supprimerArticle }
+    requirements: 
+        id: \d*
+
+evry_thing_blog_ajouterCommentaire:
+    pattern: /ajouterCom
+    defaults: { _controller: EvryThingBlogBundle:Blog:ajouterCom }

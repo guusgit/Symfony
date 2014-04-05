@@ -1,0 +1,64 @@
+{# src/EvryThing/BlogBundle/Resources/views/layout.html.twig #}
+	{%extends "::layout.html.twig"%}
+	{% block stylesheets %}
+		<link rel="stylesheet" href="{{ asset('bundles/evrythingblog/css/Accueil.css') }}" type="text/css" media="all" />
+		<link rel="stylesheet" href="{{ asset('bundles/evrythingblog/css/Blog.css') }}" type="text/css" media="all" />
+		{{ parent() }}
+	{% endblock %}
+	{%block title%}
+		{{parent()}}
+	{%endblock%}
+	{%block principal%}
+	<div id="principal">
+		<ul>		
+			{% for article in articles %}
+				{%if article.taille == "petitG"%}
+					<li class="article petitG">
+						<div class="artTitre">
+							<h1 class="titre1">{{ article.titre }}</h1>
+						</div>
+						<p class="contenu">
+							<img src="{{ asset(article.image) }}" alt="img{{article.id}}" />
+							{{ article.contenu }}
+						</p>
+						<div class="footer">
+							par {{ article.auteur }}, le {{ article.date|date('d/m/Y') }}
+						</div>
+					</li>
+				{%elseif article.taille == "petitD"%}
+					<li class="article petitD">
+						<div class="artTitre">
+							<h1 class="titre1">{{ article.titre }}</h1>
+						</div>
+						<p class="contenu">
+							<img src="{{ asset(article.image) }}" alt="img{{article.id}}" />
+							{{ article.contenu }}
+						</p>
+						<div class="footer">
+							par {{ article.auteur }}, le {{ article.date|date('d/m/Y') }}
+						</div>
+					</li>
+				{%else%}
+					<li class="article grand">
+						<div class="artTitre">
+							<h1 class="titre1">{{ article.titre }}</h1>
+						</div>
+						<p class="contenu">
+							<img src="{{ asset(article.image) }}" alt="img{{article.id}}" />
+							{{ article.contenu }}
+						</p>
+						<div class="test">
+							<a href="{{path('evry_thing_blog_ajouter')}}">DE DETAILS<a/>
+						</div>
+					</li>
+				{%endif%}
+			{% else %}
+				<li>Pas (encore !) d'articles</li>
+			{% endfor %}
+		</ul>	
+		<div id="separator"></div>
+	</div>
+	<SCRIPT language="Javascript">
+		
+	</SCRIPT> 
+	{%endblock%}

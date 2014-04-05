@@ -1,0 +1,7 @@
+parameters:
+    evry_thing_blog.antispam.class: EvryThing\BlogBundle\AntiSpam\EvryThingAntiSpam
+
+services:
+    evry_thing_blog.antispam:
+        class: %evry_thing_blog.antispam.class%
+        arguments: [@mailer, %locale%, 3]

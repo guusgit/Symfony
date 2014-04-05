@@ -1,0 +1,7 @@
+parameters:
+#    evry_thing_login.example.class: EvryThing\LoginBundle\Example
+
+services:
+#    evry_thing_login.example:
+#        class: %evry_thing_login.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
