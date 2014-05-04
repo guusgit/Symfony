@@ -1,0 +1,9 @@
+evry_thing_galerie_albums:
+    pattern:  /albums
+    defaults: { _controller: EvryThingGalerieBundle:Galerie:albums }
+
+evry_thing_galerie_carrousel:
+    pattern:  /carrousel/{album}
+    defaults: { _controller: EvryThingGalerieBundle:Galerie:carrousel }
+    requirements:
+        album: "[A-Za-z0-9]+"

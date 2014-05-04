@@ -18,6 +18,7 @@
       <parameter key="SensioFrameworkExtraBundle">Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle</parameter>
       <parameter key="EvryThingBlogBundle">EvryThing\BlogBundle\EvryThingBlogBundle</parameter>
       <parameter key="EvryThingLoginBundle">EvryThing\LoginBundle\EvryThingLoginBundle</parameter>
+      <parameter key="EvryThingGalerieBundle">EvryThing\GalerieBundle\EvryThingGalerieBundle</parameter>
       <parameter key="AcmeDemoBundle">Acme\DemoBundle\AcmeDemoBundle</parameter>
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
@@ -2744,6 +2745,10 @@
       <call method="addPath">
         <argument>C:\wamp\www\Symfony\src\EvryThing\LoginBundle/Resources/views</argument>
         <argument>EvryThingLogin</argument>
+      </call>
+      <call method="addPath">
+        <argument>C:\wamp\www\Symfony\src\EvryThing\GalerieBundle/Resources/views</argument>
+        <argument>EvryThingGalerie</argument>
       </call>
       <call method="addPath">
         <argument>C:\wamp\www\Symfony\src\Acme\DemoBundle/Resources/views</argument>

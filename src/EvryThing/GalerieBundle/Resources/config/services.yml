@@ -1,0 +1,7 @@
+parameters:
+#    evry_thing_galerie.example.class: EvryThing\GalerieBundle\Example
+
+services:
+#    evry_thing_galerie.example:
+#        class: %evry_thing_galerie.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -135,6 +135,19 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        if (0 === strpos($pathinfo, '/galerie')) {
+            // evry_thing_galerie_albums
+            if ($pathinfo === '/galerie/albums') {
+                return array (  '_controller' => 'EvryThing\\GalerieBundle\\Controller\\GalerieController::albumsAction',  '_route' => 'evry_thing_galerie_albums',);
+            }
+
+            // evry_thing_galerie_carrousel
+            if (0 === strpos($pathinfo, '/galerie/carrousel') && preg_match('#^/galerie/carrousel/(?P<album>[A-Za-z0-9]+)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'evry_thing_galerie_carrousel')), array (  '_controller' => 'EvryThing\\GalerieBundle\\Controller\\GalerieController::carrouselAction',));
+            }
+
+        }
+
         if (0 === strpos($pathinfo, '/blog')) {
             // evry_thing_login_homepage
             if ($pathinfo === '/blog/login') {

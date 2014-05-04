@@ -1,0 +1,17 @@
+{# src/EvryThing/GalerieBundle/Resources/views/layout.html.twig #}
+	{%extends "::layout.html.twig"%}
+	{% block stylesheets %}
+		{{ parent() }}
+	{% endblock %}
+	{%block title%}
+		{{parent()}}
+	{%endblock%}
+	{%block principal%}
+	<div id="principal">
+		{% for album in albums %}
+			<a href="{{path('evry_thing_galerie_carrousel', {'album':album})}}"><img src="{{ asset(article.image) }}" alt="img{{article.id}}" /></a>	
+		{% else %}
+			<li>Pas (encore !) d'albums photo</li>
+		{% endfor %}
+	</div>
+	{%endblock%}

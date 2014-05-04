@@ -1,0 +1,58 @@
+{# src/EvryThing/GalerieBundle/Resources/views/layout.html.twig #}
+	{%extends "::layout.html.twig"%}
+	{% block stylesheets %}
+		<link rel="stylesheet" href="{{ asset('bundles/evrythinggalerie/css/style.css') }}" type="text/css" media="all" />
+		<script type="text/javascript" src="{{ asset('bundles/evrythinggalerie/js/jquery.js') }}"></script>
+		{{ parent() }}
+	{% endblock %}
+	{%block title%}
+		{{parent()}}
+	{%endblock%}
+	{%block principal%}
+	<div id="principal">
+		<!-- Start WOWSlider.com BODY section -->
+			<div id="wowslider-container1">
+				<div class="ws_images">
+					<ul>
+						<li><img src="{{ asset('bundles/evrythinggalerie/images/img_0029.jpg') }}" alt="IMG_0029" title="IMG_0029" id="wows1_0"/></li>
+						<li><img src="{{ asset('bundles/evrythinggalerie/images/img_0023.jpg') }}" alt="IMG_0023" title="IMG_0023" id="wows1_1"/></li>
+						<li><img src="{{ asset('bundles/evrythinggalerie/images/img_0024.jpg') }}" alt="IMG_0024" title="IMG_0024" id="wows1_2"/></li>
+						<li><img src="{{ asset('bundles/evrythinggalerie/images/img_0025.jpg') }}" alt="IMG_0025" title="IMG_0025" id="wows1_3"/></li>
+						<li><img src="{{ asset('bundles/evrythinggalerie/images/img_0026.jpg') }}" alt="IMG_0026" title="IMG_0026" id="wows1_4"/></li>
+						<li><img src="{{ asset('bundles/evrythinggalerie/images/img_0027.jpg') }}" alt="IMG_0027" title="IMG_0027" id="wows1_5"/></li>
+						<li><img src="{{ asset('bundles/evrythinggalerie/images/img_0028.jpg') }}" alt="IMG_0028" title="IMG_0028" id="wows1_6"/></li>
+						<li><img src="{{ asset('bundles/evrythinggalerie/images/imgp1253.jpg') }}" alt="IMGP1253" title="IMGP1253" id="wows1_7"/></li>
+						<li><img src="{{ asset('bundles/evrythinggalerie/images/imgp1247.jpg') }}" alt="IMGP1247" title="IMGP1247" id="wows1_8"/></li>
+						<li><img src="{{ asset('bundles/evrythinggalerie/images/imgp1248.jpg') }}" alt="IMGP1248" title="IMGP1248" id="wows1_9"/></li>
+						<li><img src="{{ asset('bundles/evrythinggalerie/images/imgp1249.jpg') }}" alt="IMGP1249" title="IMGP1249" id="wows1_10"/></li>
+						<li><img src="{{ asset('bundles/evrythinggalerie/images/imgp1251.jpg') }}" alt="IMGP1251" title="IMGP1251" id="wows1_11"/></li>
+						<li><img src="{{ asset('bundles/evrythinggalerie/images/imgp1252.jpg') }}" alt="IMGP1252" title="IMGP1252" id="wows1_12"/></li>
+					</ul>
+				</div>
+				<div class="ws_thumbs">
+					<div>
+						<a href="#wows1_0" title="IMG_0029"><img src="{{ asset('bundles/evrythinggalerie/images/tooltips/img_0029.jpg') }}" alt="" /></a>
+						<a href="#wows1_1" title="IMG_0023"><img src="{{ asset('bundles/evrythinggalerie/images/tooltips/img_0023.jpg') }}" alt="" /></a>
+						<a href="#wows1_2" title="IMG_0024"><img src="{{ asset('bundles/evrythinggalerie/images/tooltips/img_0024.jpg') }}" alt="" /></a>
+						<a href="#wows1_3" title="IMG_0025"><img src="{{ asset('bundles/evrythinggalerie/images/tooltips/img_0025.jpg') }}" alt="" /></a>
+						<a href="#wows1_4" title="IMG_0026"><img src="{{ asset('bundles/evrythinggalerie/images/tooltips/img_0026.jpg') }}" alt="" /></a>
+						<a href="#wows1_5" title="IMG_0027"><img src="{{ asset('bundles/evrythinggalerie/images/tooltips/img_0027.jpg') }}" alt="" /></a>
+						<a href="#wows1_6" title="IMG_0028"><img src="{{ asset('bundles/evrythinggalerie/images/tooltips/img_0028.jpg') }}" alt="" /></a>
+						<a href="#wows1_7" title="IMGP1253"><img src="{{ asset('bundles/evrythinggalerie/images/tooltips/imgp1253.jpg') }}" alt="" /></a>
+						<a href="#wows1_8" title="IMGP1247"><img src="{{ asset('bundles/evrythinggalerie/images/tooltips/imgp1247.jpg') }}" alt="" /></a>
+						<a href="#wows1_9" title="IMGP1248"><img src="{{ asset('bundles/evrythinggalerie/images/tooltips/imgp1248.jpg') }}" alt="" /></a>
+						<a href="#wows1_10" title="IMGP1249"><img src="{{ asset('bundles/evrythinggalerie/images/tooltips/imgp1249.jpg') }}" alt="" /></a>
+						<a href="#wows1_11" title="IMGP1251"><img src="{{ asset('bundles/evrythinggalerie/images/tooltips/imgp1251.jpg') }}" alt="" /></a>
+						<a href="#wows1_12" title="IMGP1252"><img src="{{ asset('bundles/evrythinggalerie/images/tooltips/imgp1252.jpg') }}" alt="" /></a>
+					</div>
+				</div>
+				<span class="wsl"><a href="http://wowslider.com">slideshow html</a> by WOWSlider.com v5.4</span>
+				<div class="ws_shadow"></div>
+			</div>
+			<script type="text/javascript" src="{{ asset('bundles/evrythinggalerie/js/wowslider.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('bundles/evrythinggalerie/js/script.js') }}"></script>
+		<!-- End WOWSlider.com BODY section -->
+		<ul>		
+		</ul>	
+	</div>
+	{%endblock%}
