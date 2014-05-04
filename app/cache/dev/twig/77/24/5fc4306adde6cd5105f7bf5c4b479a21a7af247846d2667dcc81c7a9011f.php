@@ -60,7 +60,9 @@ class __TwigTemplate_77245fc4306adde6cd5105f7bf5c4b479a21a7af247846d2667dcc81c7a
             // line 12
             echo "\t\t\t<a href=\"";
             echo twig_escape_filter($this->env, $this->env->getExtension('routing')->getPath("evry_thing_galerie_carrousel", array("album" => (isset($context["album"]) ? $context["album"] : $this->getContext($context, "album")))), "html", null, true);
-            echo "\">test</a>\t
+            echo "\"><img src=\"";
+            echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/evrythinggalerie/919850_10201457092254208_1844789856_o.jpg"), "html", null, true);
+            echo "\" alt=\"test\" /></a>\t
 \t\t";
             $context['_iterated'] = true;
         }
@@ -89,6 +91,6 @@ class __TwigTemplate_77245fc4306adde6cd5105f7bf5c4b479a21a7af247846d2667dcc81c7a
 
     public function getDebugInfo()
     {
-        return array (  76 => 16,  69 => 14,  61 => 12,  56 => 11,  53 => 10,  50 => 9,  43 => 7,  40 => 6,  33 => 4,  30 => 3,);
+        return array (  78 => 16,  71 => 14,  61 => 12,  56 => 11,  53 => 10,  50 => 9,  43 => 7,  40 => 6,  33 => 4,  30 => 3,);
     }
 }

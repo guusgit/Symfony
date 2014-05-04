@@ -50,7 +50,10 @@ class __TwigTemplate_ea9abcc56754c237e171268b7cbb570056134ccc3dcc6d15a2a724194cb
         echo "\" class=\"navOrange\">BDE</a></li>
 \t\t\t\t\t<li><a href=\"index.html.twig\" class=\"navBleu\">MIAGE CONNEXION</a></li>
 \t\t\t\t\t<li><a href=\"evry.html\" class=\"navOrange\">&EacuteV&EgraveNEMENTS</a></li>
-\t\t\t\t\t<li><a href=\"bde.html\" class=\"navBleu\">GALERIE</a></li>
+\t\t\t\t\t<li><a href=\"";
+        // line 22
+        echo $this->env->getExtension('routing')->getPath("evry_thing_galerie_albums", array("page" => 1));
+        echo "\" class=\"navBleu\">GALERIE</a></li>
 \t\t\t\t\t<li><a href=\"index.html.twig\" class=\"navOrange\">DOCUMENTS</a></li>
 \t\t\t\t\t<li><a href=\"evry.html\" class=\"navBleu\">ADH&EacuteSIONS</a></li>
 \t\t\t\t\t<li><a href=\"bde.html\" class=\"navOrange\">ESPACE ANCIEN</a></li>
@@ -133,6 +136,6 @@ class __TwigTemplate_ea9abcc56754c237e171268b7cbb570056134ccc3dcc6d15a2a724194cb
 
     public function getDebugInfo()
     {
-        return array (  118 => 33,  115 => 32,  108 => 30,  101 => 9,  98 => 8,  92 => 7,  82 => 41,  78 => 40,  74 => 39,  68 => 35,  65 => 32,  63 => 30,  49 => 19,  44 => 17,  36 => 11,  34 => 8,  23 => 2,  119 => 60,  111 => 31,  107 => 56,  61 => 12,  58 => 11,  51 => 9,  48 => 8,  42 => 6,  38 => 5,  33 => 4,  30 => 7,);
+        return array (  121 => 33,  118 => 32,  114 => 31,  111 => 30,  104 => 9,  101 => 8,  95 => 7,  85 => 41,  81 => 40,  77 => 39,  71 => 35,  68 => 32,  66 => 30,  55 => 22,  49 => 19,  44 => 17,  36 => 11,  34 => 8,  30 => 7,  23 => 2,);
     }
 }
