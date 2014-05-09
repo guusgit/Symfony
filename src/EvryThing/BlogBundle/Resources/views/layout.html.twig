@@ -21,6 +21,20 @@
 							<img src="{{ asset(article.image) }}" alt="img{{article.id}}" />
 							{{ article.contenu }}
 						</p>
+						<div class="contenudur">
+                          
+                          <input id="boutonP{{ loop.index }}" type="button" name="derouleur" value="+ DE DETAILS" onClick="derouler(this.id)">
+                          
+                          <input id="boutonM{{ loop.index }}" type="button" style="display:none;" name="enrouleur" value="- DE DETAILS" onClick="enrouler(this.id)">
+							
+                            <p class="contenudur" style="display:none;">
+                              ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'
+                          </p>
+						</div>
 						<div class="footer">
 							par {{ article.auteur }}, le {{ article.date|date('d/m/Y') }}
 						</div>
@@ -34,6 +48,20 @@
 							<img src="{{ asset(article.image) }}" alt="img{{article.id}}" />
 							{{ article.contenu }}
 						</p>
+						<div class="contenudur">
+                          
+                          <input id="boutonP{{ loop.index }}" type="button" name="derouleur" value="+ DE DETAILS" onClick="derouler(this.id)">
+                          
+                          <input id="boutonM{{ loop.index }}" type="button" style="display:none;" name="enrouleur" value="- DE DETAILS" onClick="enrouler(this.id)">
+							
+                            <p class="contenudur" style="display:none;">
+                              ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'
+                          </p>
+						</div>
 						<div class="footer">
 							par {{ article.auteur }}, le {{ article.date|date('d/m/Y') }}
 						</div>
@@ -47,8 +75,21 @@
 							<img src="{{ asset(article.image) }}" alt="img{{article.id}}" />
 							{{ article.contenu }}
 						</p>
+						<div class="contenudur">
+                          
+                          <input id="boutonP{{ loop.index }}" type="button" name="derouleur" value="+ DE DETAILS" onClick="derouler(this.id)">
+                          
+                          <input id="boutonM{{ loop.index }}" type="button" style="display:none;" name="enrouleur" value="- DE DETAILS" onClick="enrouler(this.id)">
+							
+                            <p class="contenudur" style="display:none;">
+                              ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'
+                          </p>
+						</div>
 						<div class="test">
-							<a href="{{path('evry_thing_blog_ajouterArticle')}}">DE DETAILS</a>
 						</div>
 					</li>
 				{%endif%}
@@ -57,4 +98,28 @@
 			{% endfor %}
 		</ul>	
 	</div>
+	
+		<script>
+    function derouler(idbutton) {
+
+     ciblecontenu = document.getElementById(idbutton).nextElementSibling.nextElementSibling;
+ciblecontenu.style.display='block';
+      ciblebuttonmoins = document.getElementById(idbutton).nextElementSibling;
+      ciblebuttonmoins.style.display='block';
+      document.getElementById(idbutton).style.display='none';
+  
+   }
+
+  function enrouler(idbutton){
+    
+    cachecontenu = document.getElementById(idbutton).nextElementSibling;
+    
+    cachecontenu.style.display='none';
+    
+    buttonplus = document.getElementById(idbutton).previousElementSibling;
+    document.getElementById(idbutton).style.display='none';
+    buttonplus.style.display='block';
+    
+  }
+</script>
 	{%endblock%}

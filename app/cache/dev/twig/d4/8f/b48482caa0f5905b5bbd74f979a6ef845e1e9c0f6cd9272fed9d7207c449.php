@@ -65,6 +65,19 @@ class __TwigTemplate_d48fb48482caa0f5905b5bbd74f979a6ef845e1e9c0f6cd9272fed9d720
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["articles"]) ? $context["articles"] : $this->getContext($context, "articles")));
         $context['_iterated'] = false;
+        $context['loop'] = array(
+          'parent' => $context['_parent'],
+          'index0' => 0,
+          'index'  => 1,
+          'first'  => true,
+        );
+        if (is_array($context['_seq']) || (is_object($context['_seq']) && $context['_seq'] instanceof Countable)) {
+            $length = count($context['_seq']);
+            $context['loop']['revindex0'] = $length - 1;
+            $context['loop']['revindex'] = $length;
+            $context['loop']['length'] = $length;
+            $context['loop']['last'] = 1 === $length;
+        }
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
             // line 15
             echo "\t\t\t\t";
@@ -89,9 +102,29 @@ class __TwigTemplate_d48fb48482caa0f5905b5bbd74f979a6ef845e1e9c0f6cd9272fed9d720
                 echo twig_escape_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "contenu"), "html", null, true);
                 echo "
 \t\t\t\t\t\t</p>
+\t\t\t\t\t\t<div class=\"contenudur\">
+                          
+                          <input id=\"boutonP";
+                // line 26
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["loop"]) ? $context["loop"] : $this->getContext($context, "loop")), "index"), "html", null, true);
+                echo "\" type=\"button\" name=\"derouleur\" value=\"+ DE DETAILS\" onClick=\"derouler(this.id)\">
+                          
+                          <input id=\"boutonM";
+                // line 28
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["loop"]) ? $context["loop"] : $this->getContext($context, "loop")), "index"), "html", null, true);
+                echo "\" type=\"button\" style=\"display:none;\" name=\"enrouleur\" value=\"- DE DETAILS\" onClick=\"enrouler(this.id)\">
+\t\t\t\t\t\t\t
+                            <p class=\"contenudur\" style=\"display:none;\">
+                              ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'
+                          </p>
+\t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"footer\">
 \t\t\t\t\t\t\tpar ";
-                // line 25
+                // line 39
                 echo twig_escape_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "auteur"), "html", null, true);
                 echo ", le ";
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "date"), "d/m/Y"), "html", null, true);
@@ -100,29 +133,49 @@ class __TwigTemplate_d48fb48482caa0f5905b5bbd74f979a6ef845e1e9c0f6cd9272fed9d720
 \t\t\t\t\t</li>
 \t\t\t\t";
             } elseif (($this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "taille") == "petitD")) {
-                // line 29
+                // line 43
                 echo "\t\t\t\t\t<li class=\"article petitD\">
 \t\t\t\t\t\t<div class=\"artTitre\">
 \t\t\t\t\t\t\t<h1 class=\"titre1\">";
-                // line 31
+                // line 45
                 echo twig_escape_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "titre"), "html", null, true);
                 echo "</h1>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<p class=\"contenu\">
 \t\t\t\t\t\t\t<img src=\"";
-                // line 34
+                // line 48
                 echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "image")), "html", null, true);
                 echo "\" alt=\"img";
                 echo twig_escape_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "id"), "html", null, true);
                 echo "\" />
 \t\t\t\t\t\t\t";
-                // line 35
+                // line 49
                 echo twig_escape_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "contenu"), "html", null, true);
                 echo "
 \t\t\t\t\t\t</p>
+\t\t\t\t\t\t<div class=\"contenudur\">
+                          
+                          <input id=\"boutonP";
+                // line 53
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["loop"]) ? $context["loop"] : $this->getContext($context, "loop")), "index"), "html", null, true);
+                echo "\" type=\"button\" name=\"derouleur\" value=\"+ DE DETAILS\" onClick=\"derouler(this.id)\">
+                          
+                          <input id=\"boutonM";
+                // line 55
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["loop"]) ? $context["loop"] : $this->getContext($context, "loop")), "index"), "html", null, true);
+                echo "\" type=\"button\" style=\"display:none;\" name=\"enrouleur\" value=\"- DE DETAILS\" onClick=\"enrouler(this.id)\">
+\t\t\t\t\t\t\t
+                            <p class=\"contenudur\" style=\"display:none;\">
+                              ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'
+                          </p>
+\t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"footer\">
 \t\t\t\t\t\t\tpar ";
-                // line 38
+                // line 66
                 echo twig_escape_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "auteur"), "html", null, true);
                 echo ", le ";
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "date"), "d/m/Y"), "html", null, true);
@@ -131,50 +184,98 @@ class __TwigTemplate_d48fb48482caa0f5905b5bbd74f979a6ef845e1e9c0f6cd9272fed9d720
 \t\t\t\t\t</li>
 \t\t\t\t";
             } else {
-                // line 42
+                // line 70
                 echo "\t\t\t\t\t<li class=\"article grand\">
 \t\t\t\t\t\t<div class=\"artTitre\">
 \t\t\t\t\t\t\t<h1 class=\"titre1\">";
-                // line 44
+                // line 72
                 echo twig_escape_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "titre"), "html", null, true);
                 echo "</h1>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t\t<p class=\"contenu\">
 \t\t\t\t\t\t\t<img src=\"";
-                // line 47
+                // line 75
                 echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "image")), "html", null, true);
                 echo "\" alt=\"img";
                 echo twig_escape_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "id"), "html", null, true);
                 echo "\" />
 \t\t\t\t\t\t\t";
-                // line 48
+                // line 76
                 echo twig_escape_filter($this->env, $this->getAttribute((isset($context["article"]) ? $context["article"] : $this->getContext($context, "article")), "contenu"), "html", null, true);
                 echo "
 \t\t\t\t\t\t</p>
+\t\t\t\t\t\t<div class=\"contenudur\">
+                          
+                          <input id=\"boutonP";
+                // line 80
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["loop"]) ? $context["loop"] : $this->getContext($context, "loop")), "index"), "html", null, true);
+                echo "\" type=\"button\" name=\"derouleur\" value=\"+ DE DETAILS\" onClick=\"derouler(this.id)\">
+                          
+                          <input id=\"boutonM";
+                // line 82
+                echo twig_escape_filter($this->env, $this->getAttribute((isset($context["loop"]) ? $context["loop"] : $this->getContext($context, "loop")), "index"), "html", null, true);
+                echo "\" type=\"button\" style=\"display:none;\" name=\"enrouleur\" value=\"- DE DETAILS\" onClick=\"enrouler(this.id)\">
+\t\t\t\t\t\t\t
+                            <p class=\"contenudur\" style=\"display:none;\">
+                              ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'
+                                 ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'   ceci est le corps de l'article : ceci est le corps de l'article'
+                          </p>
+\t\t\t\t\t\t</div>
 \t\t\t\t\t\t<div class=\"test\">
-\t\t\t\t\t\t\t<a href=\"";
-                // line 51
-                echo $this->env->getExtension('routing')->getPath("evry_thing_blog_ajouterArticle");
-                echo "\">DE DETAILS</a>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</li>
 \t\t\t\t";
             }
-            // line 55
+            // line 96
             echo "\t\t\t";
             $context['_iterated'] = true;
+            ++$context['loop']['index0'];
+            ++$context['loop']['index'];
+            $context['loop']['first'] = false;
+            if (isset($context['loop']['length'])) {
+                --$context['loop']['revindex0'];
+                --$context['loop']['revindex'];
+                $context['loop']['last'] = 0 === $context['loop']['revindex0'];
+            }
         }
         if (!$context['_iterated']) {
-            // line 56
+            // line 97
             echo "\t\t\t\t<!--<li>Pas (encore !) d'articles</li>-->
 \t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 58
+        // line 99
         echo "\t\t</ul>\t
 \t</div>
+\t
+\t\t<script>
+    function derouler(idbutton) {
+
+     ciblecontenu = document.getElementById(idbutton).nextElementSibling.nextElementSibling;
+ciblecontenu.style.display='block';
+      ciblebuttonmoins = document.getElementById(idbutton).nextElementSibling;
+      ciblebuttonmoins.style.display='block';
+      document.getElementById(idbutton).style.display='none';
+  
+   }
+
+  function enrouler(idbutton){
+    
+    cachecontenu = document.getElementById(idbutton).nextElementSibling;
+    
+    cachecontenu.style.display='none';
+    
+    buttonplus = document.getElementById(idbutton).previousElementSibling;
+    document.getElementById(idbutton).style.display='none';
+    buttonplus.style.display='block';
+    
+  }
+</script>
 \t";
     }
 
@@ -190,6 +291,6 @@ class __TwigTemplate_d48fb48482caa0f5905b5bbd74f979a6ef845e1e9c0f6cd9272fed9d720
 
     public function getDebugInfo()
     {
-        return array (  176 => 58,  169 => 56,  164 => 55,  157 => 51,  151 => 48,  145 => 47,  139 => 44,  135 => 42,  126 => 38,  120 => 35,  114 => 34,  108 => 31,  104 => 29,  95 => 25,  89 => 22,  83 => 21,  77 => 18,  73 => 16,  70 => 15,  65 => 14,  61 => 12,  58 => 11,  51 => 9,  48 => 8,  42 => 6,  38 => 5,  33 => 4,  30 => 3,);
+        return array (  253 => 99,  246 => 97,  233 => 96,  216 => 82,  211 => 80,  204 => 76,  198 => 75,  192 => 72,  188 => 70,  179 => 66,  165 => 55,  160 => 53,  153 => 49,  147 => 48,  141 => 45,  137 => 43,  128 => 39,  114 => 28,  109 => 26,  102 => 22,  96 => 21,  90 => 18,  86 => 16,  83 => 15,  65 => 14,  61 => 12,  58 => 11,  51 => 9,  48 => 8,  42 => 6,  38 => 5,  33 => 4,  30 => 3,);
     }
 }
