@@ -2964,6 +2964,7 @@ class appDevDebugProjectContainer extends Container
         $instance->addPath('C:\\wamp\\www\\Symfony\\vendor\\doctrine\\doctrine-bundle\\Doctrine\\Bundle\\DoctrineBundle/Resources/views', 'Doctrine');
         $instance->addPath('C:\\wamp\\www\\Symfony\\src\\EvryThing\\BlogBundle/Resources/views', 'EvryThingBlog');
         $instance->addPath('C:\\wamp\\www\\Symfony\\src\\EvryThing\\LoginBundle/Resources/views', 'EvryThingLogin');
+        $instance->addPath('C:\\wamp\\www\\Symfony\\src\\EvryThing\\GalerieBundle/Resources/views', 'EvryThingGalerie');
         $instance->addPath('C:\\wamp\\www\\Symfony\\src\\Acme\\DemoBundle/Resources/views', 'AcmeDemo');
         $instance->addPath('C:\\wamp\\www\\Symfony\\vendor\\symfony\\symfony\\src\\Symfony\\Bundle\\WebProfilerBundle/Resources/views', 'WebProfiler');
         $instance->addPath('C:\\wamp\\www\\Symfony\\vendor\\sensio\\distribution-bundle\\Sensio\\Bundle\\DistributionBundle/Resources/views', 'SensioDistribution');
@@ -3450,6 +3451,7 @@ class appDevDebugProjectContainer extends Container
                 'SensioFrameworkExtraBundle' => 'Sensio\\Bundle\\FrameworkExtraBundle\\SensioFrameworkExtraBundle',
                 'EvryThingBlogBundle' => 'EvryThing\\BlogBundle\\EvryThingBlogBundle',
                 'EvryThingLoginBundle' => 'EvryThing\\LoginBundle\\EvryThingLoginBundle',
+                'EvryThingGalerieBundle' => 'EvryThing\\GalerieBundle\\EvryThingGalerieBundle',
                 'AcmeDemoBundle' => 'Acme\\DemoBundle\\AcmeDemoBundle',
                 'WebProfilerBundle' => 'Symfony\\Bundle\\WebProfilerBundle\\WebProfilerBundle',
                 'SensioDistributionBundle' => 'Sensio\\Bundle\\DistributionBundle\\SensioDistributionBundle',

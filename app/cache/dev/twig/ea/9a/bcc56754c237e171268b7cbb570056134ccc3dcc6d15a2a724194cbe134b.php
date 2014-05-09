@@ -24,12 +24,12 @@ class __TwigTemplate_ea9abcc56754c237e171268b7cbb570056134ccc3dcc6d15a2a724194cb
 <!doctype html>
 <html>
 <head>
-<meta charset=\"utf-8\">
-<title>";
+\t<meta charset=\"utf-8\">
+\t<title>";
         // line 7
         $this->displayBlock('title', $context, $blocks);
         echo " EvryThing</title>
-";
+\t";
         // line 8
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 11
@@ -50,7 +50,10 @@ class __TwigTemplate_ea9abcc56754c237e171268b7cbb570056134ccc3dcc6d15a2a724194cb
         echo "\" class=\"navOrange\">BDE</a></li>
 \t\t\t\t\t<li><a href=\"index.html.twig\" class=\"navBleu\">MIAGE CONNEXION</a></li>
 \t\t\t\t\t<li><a href=\"evry.html\" class=\"navOrange\">&EacuteV&EgraveNEMENTS</a></li>
-\t\t\t\t\t<li><a href=\"bde.html\" class=\"navBleu\">GALERIE</a></li>
+\t\t\t\t\t<li><a href=\"";
+        // line 22
+        echo $this->env->getExtension('routing')->getPath("evry_thing_galerie_albums", array("page" => 1));
+        echo "\" class=\"navBleu\">GALERIE</a></li>
 \t\t\t\t\t<li><a href=\"index.html.twig\" class=\"navOrange\">DOCUMENTS</a></li>
 \t\t\t\t\t<li><a href=\"evry.html\" class=\"navBleu\">ADH&EacuteSIONS</a></li>
 \t\t\t\t\t<li><a href=\"bde.html\" class=\"navOrange\">ESPACE ANCIEN</a></li>
@@ -98,10 +101,10 @@ class __TwigTemplate_ea9abcc56754c237e171268b7cbb570056134ccc3dcc6d15a2a724194cb
     public function block_stylesheets($context, array $blocks = array())
     {
         // line 9
-        echo "<link rel=\"stylesheet\" href=\"";
+        echo "\t\t<link rel=\"stylesheet\" href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/evrythingblog/css/Global.css"), "html", null, true);
         echo "\" type=\"text/css\" media=\"all\" />
-";
+\t";
     }
 
     // line 30
@@ -133,6 +136,6 @@ class __TwigTemplate_ea9abcc56754c237e171268b7cbb570056134ccc3dcc6d15a2a724194cb
 
     public function getDebugInfo()
     {
-        return array (  118 => 33,  115 => 32,  111 => 31,  101 => 9,  98 => 8,  92 => 7,  82 => 41,  78 => 40,  74 => 39,  68 => 35,  63 => 30,  49 => 19,  44 => 17,  36 => 11,  34 => 8,  23 => 2,  176 => 58,  169 => 56,  164 => 55,  157 => 51,  151 => 48,  145 => 47,  139 => 44,  135 => 42,  126 => 38,  120 => 35,  114 => 34,  108 => 30,  104 => 29,  95 => 25,  89 => 22,  83 => 21,  77 => 18,  73 => 16,  70 => 15,  65 => 32,  61 => 12,  58 => 11,  51 => 9,  48 => 8,  42 => 6,  38 => 5,  33 => 4,  30 => 7,);
+        return array (  121 => 33,  118 => 32,  114 => 31,  111 => 30,  104 => 9,  101 => 8,  95 => 7,  85 => 41,  81 => 40,  77 => 39,  71 => 35,  68 => 32,  66 => 30,  55 => 22,  49 => 19,  44 => 17,  36 => 11,  34 => 8,  30 => 7,  23 => 2,);
     }
 }

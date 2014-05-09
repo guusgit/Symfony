@@ -17,8 +17,9 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new EvryThing\BlogBundle\EvryThingBlogBundle(),
-            new EvryThing\LoginBundle\EvryThingLoginBundle()
-			///new Knp\Bundle\MarkdownBundle\KnpMarkdownBundle()
+            new EvryThing\LoginBundle\EvryThingLoginBundle(),
+			///new Knp\Bundle\MarkdownBundle\KnpMarkdownBundle(),
+            new EvryThing\GalerieBundle\EvryThingGalerieBundle()
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

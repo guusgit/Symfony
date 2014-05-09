@@ -1,0 +1,46 @@
+{# src/EvryThing/GalerieBundle/Resources/views/layout.html.twig #}
+	{%extends "::layout.html.twig"%}
+	{% block stylesheets %}
+		<link rel="stylesheet" href="{{ asset('bundles/evrythinggalerie/css/style.css') }}" type="text/css" media="all" />
+		<script type="text/javascript" src="{{ asset('bundles/evrythinggalerie/js/jquery.js') }}"></script>
+		{{ parent() }}
+	{% endblock %}
+	{%block title%}
+		{{parent()}}
+	{%endblock%}
+	{%block principal%}
+	<div id="principal">
+		<!-- Start WOWSlider.com BODY section -->
+			<div id="wowslider-container1">
+				<div class="ws_images">
+					<ul>
+						{% for photo in photos %}
+							{% if loop.index < photos|length %}
+								<li><img src="{{ asset('bundles/evrythinggalerie/images/' ~ album ~ '/' ~ photo) }}" alt="" title="" id="wows1_{{ loop.index }}"/></li>
+							{%endif%}
+						{% else %}
+							<li>Pas encore de photos</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="ws_thumbs">
+					<div>
+						{% for photo in photos %}
+							{% if loop.index < photos|length %}
+								<a href="#wows1_{{ loop.index }}" title="{{ loop.index }}"><img src="{{ asset('bundles/evrythinggalerie/images/' ~ album ~ '/tooltips/' ~ photo) }}" alt="" /></a>
+							{%endif%}
+						{% else %}
+							<li>Pas encore de photos</li>
+						{% endfor %}
+					</div>
+				</div>
+				<span class="wsl"><a href="http://wowslider.com">slideshow html</a> by WOWSlider.com v5.4</span>
+				<div class="ws_shadow"></div>
+			</div>
+			<script type="text/javascript" src="{{ asset('bundles/evrythinggalerie/js/wowslider.js') }}"></script>
+			<script type="text/javascript" src="{{ asset('bundles/evrythinggalerie/js/script.js') }}"></script>
+		<!-- End WOWSlider.com BODY section -->
+		<ul>		
+		</ul>	
+	</div>
+	{%endblock%}

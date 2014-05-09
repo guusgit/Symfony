@@ -16,12 +16,12 @@ body{
 	position:relative;
 }
 header{
-	position:absolute;
-	left:10%;
-	width:80%;	
-	height:135px;
+	margin:auto;
+	width:79vw;	
+	height:22vh;
 	background-image:url("../images/header.jpg");
 	background-position:center;
+	background-repeat:repeat-x;
 }
 nav{
 	position:absolute;
@@ -51,20 +51,17 @@ nav ul li a:onhover{
 	/*transition: top 1.4s cubic-bezier(.49,.22,.52,1.35);  */
 }
 #centre{
-	position:relative;
-	left:10%;
-	top:135px;
+	margin:auto;
 	width:80%;
-	height:500px;
+	height:37.5vw;
 	background-color: rgba(221, 221, 221, 0.8);
 }
 footer{
 	background: linear-gradient(#fff 0%, #cdcdcd 80%);
-	position:absolute;
-	left:0px;
-	top:635px;
+	margin:auto;
 	width:80%;
 	height:75px;
+	
 }
 footer img{
 	max-width: 50px;

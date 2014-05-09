@@ -3,11 +3,11 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>{%block title%}Accueil{%endblock%} EvryThing</title>
-{%block stylesheets%}
-<link rel="stylesheet" href="{{ asset('bundles/evrythingblog/css/Global.css') }}" type="text/css" media="all" />
-{% endblock %}
+	<meta charset="utf-8">
+	<title>{%block title%}Accueil{%endblock%} EvryThing</title>
+	{%block stylesheets%}
+		<link rel="stylesheet" href="{{ asset('bundles/evrythingblog/css/Global.css') }}" type="text/css" media="all" />
+	{% endblock %}
 </head>
 <body>
 	<div id="background">
@@ -19,7 +19,7 @@
 					<li><a href="{{path('evry_thing_blog_modifierArticle', {'id':1})}}" class="navOrange">BDE</a></li>
 					<li><a href="index.html.twig" class="navBleu">MIAGE CONNEXION</a></li>
 					<li><a href="evry.html" class="navOrange">&EacuteV&EgraveNEMENTS</a></li>
-					<li><a href="bde.html" class="navBleu">GALERIE</a></li>
+					<li><a href="{{path('evry_thing_galerie_albums', {'page':1})}}" class="navBleu">GALERIE</a></li>
 					<li><a href="index.html.twig" class="navOrange">DOCUMENTS</a></li>
 					<li><a href="evry.html" class="navBleu">ADH&EacuteSIONS</a></li>
 					<li><a href="bde.html" class="navOrange">ESPACE ANCIEN</a></li>
